@@ -10,6 +10,7 @@ let currentSuggestions = []; // --- NEW: Global variable to store suggestions
 const converter = new showdown.Converter();
 // Optional: Tell it to handle lists without messing up
 converter.setOption('simpleLineBreaks', true); 
+converter.setOption('definitionLists', true); // --- MODIFIED: Enable definition lists ---
 
 
 // --- NEW: Reusable function to load and show suggestions ---
