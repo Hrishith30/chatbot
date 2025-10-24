@@ -53,8 +53,9 @@ async function loadAndDisplaySuggestions() {
             // Add the container to the dedicated suggestion-area
             suggestionArea.appendChild(container);
 
-            // Set animation speed based on content (1 second per suggestion)
-            const duration = currentSuggestions.length * 1.0; 
+            // Set animation speed based on content (4 seconds per suggestion for a slower scroll)
+            // --- MODIFIED: Increased multiplier from 1.0 to 4.0 ---
+            const duration = currentSuggestions.length * 4.0; 
             container.style.animationDuration = `${duration}s`;
         }
     } catch (err) {

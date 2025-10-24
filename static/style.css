@@ -337,8 +337,10 @@ body {
   display: flex;
   flex-wrap: nowrap; /* Force single line */
   gap: 0.75rem; /* Space between blocks */
-  /* --- CRITICAL FIX: Set width to 200% for looping animation --- */
-  width: 200%;
+  
+  /* --- MODIFIED FIX: Let the container width be set by its content --- */
+  width: max-content; /* This replaces "width: 200%;" */
+
   /* --- MODIFIED: Changed duration to a sensible default --- */
   animation: scrollSuggestions 50s linear infinite;
   /* This duration will be overridden by chat.js */
